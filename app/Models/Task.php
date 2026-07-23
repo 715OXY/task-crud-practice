@@ -10,17 +10,17 @@ class Task extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'title',
         'description',
         'status',
         'due_date',
-        'user_id',
     ];
 
     protected $casts = [
         'due_date' => 'date',
     ];
-    
+
     // Userとのリレーション（学習の発展性として定義だけしておく）
     public function user()
     {
